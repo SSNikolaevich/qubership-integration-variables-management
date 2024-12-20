@@ -21,5 +21,5 @@ kubernetes:
     token: ${KUBE_USER_TOKEN:}
 
 consul:
-  url: ${CONSUL_URL:http://consul:8500}
+  url: http://${CONSUL_HOST:consul}:${CONSUL_PORT:8500}
 
