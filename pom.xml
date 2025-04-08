@@ -18,10 +18,14 @@
         <revision>0.1.2</revision>
 
         <!-- BOMs -->
-
-        <context-propagation-bom.version>6.0.5</context-propagation-bom.version>
+        <dbaas-client-bom.version>8.0.0-SNAPSHOT</dbaas-client-bom.version>
+        <context-propagation-bom.version>7.0.0-SNAPSHOT</context-propagation-bom.version>
         <spring-cloud-bom.version>2024.0.0</spring-cloud-bom.version>
         <jackson-bom.version>2.17.0</jackson-bom.version>
+
+        <!-- Cloud-core dependencies -->
+
+        <maas-client.version>11.0.0-SNAPSHOT</maas-client.version>
 
         <!-- 3rd party dependencies -->
 
@@ -50,6 +54,22 @@
             <!-- BOMs -->
 
             <dependency>
+                <groupId>org.qubership.cloud</groupId>
+                <artifactId>dbaas-client-bom</artifactId>
+                <version>${dbaas-client-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.qubership.cloud</groupId>
+                <artifactId>context-propagation-bom</artifactId>
+                <version>${context-propagation-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud-bom.version}</version>
@@ -66,6 +86,22 @@
             </dependency>
 
             <!-- Dependencies -->
+
+            <dependency>
+                <groupId>org.qubership.cloud.maas.client</groupId>
+                <artifactId>maas-client</artifactId>
+                <version>${maas-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.qubership.cloud.maas.client</groupId>
+                <artifactId>kafka-blue-green-consumer</artifactId>
+                <version>${maas-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.qubership.cloud.maas.client</groupId>
+                <artifactId>deployment-version-tracker</artifactId>
+                <version>${maas-client.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.postgresql</groupId>
@@ -156,6 +192,29 @@
 
 
         <!-- Datasource dependencies -->
+
+        <dependency>
+            <groupId>org.qubership.cloud</groupId>
+            <artifactId>dbaas-client-postgres-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.qubership.cloud</groupId>
+            <artifactId>dbaas-client-postgres-base</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.netcracker.cloud</groupId>
+                    <artifactId>dbaas-client-subscriber</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.qubership.cloud</groupId>
+            <artifactId>dbaas-client-resttemplate</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.qubership.cloud</groupId>
+            <artifactId>dbaas-client-postgres-flyway</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -271,6 +330,12 @@
         <dependency>
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-exporter-otlp</artifactId>
+        </dependency>
+
+        <!-- Used for TenantManagement only! (org.qubership.cloud.tenantmanager) -->
+        <dependency>
+            <groupId>org.qubership.cloud.maas.client</groupId>
+            <artifactId>maas-client</artifactId>
         </dependency>
 
     </dependencies>

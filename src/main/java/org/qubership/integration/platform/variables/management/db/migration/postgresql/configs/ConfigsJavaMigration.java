@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.qubership.integration.platform.variables.management.db.migration.postrgesql.configs;
+package org.qubership.integration.platform.variables.management.db.migration.postgresql.configs;
 
 import org.flywaydb.core.api.migration.BaseJavaMigration;
 

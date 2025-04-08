@@ -180,7 +180,16 @@ kubernetes:
     label: ${app.prefix}-variable-type
 
 qip:
+  datasource:
+    configuration:
+      enabled: true
+  flyway-initializer:
+    enabled: false
   actions-log:
     cleanup:
       interval: ${ACTION_LOG_CLEANUP_INTERVAL:14 days} # logs older than interval will be deleted, for example: '1 hour', '7 days', '2 years 3 month'
       cron: ${ACTION_LOG_CLEANUP_CRON:0 0 0 ? * SAT} # Cleanup task schedule in cron expression format
+
+tenant:
+  default:
+    id: ""

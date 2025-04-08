@@ -16,11 +16,13 @@
 
 package org.qubership.integration.platform.variables.management;
 
+import org.qubership.cloud.dbaas.client.EnableFlywayPostgresql;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@EnableFlywayPostgresql
 public class VariablesManagementApplicationRunner {
 
     public static void main(String[] args) {

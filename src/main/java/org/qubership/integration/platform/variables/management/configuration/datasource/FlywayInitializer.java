@@ -21,7 +21,7 @@ import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.configuration.ClassicConfiguration;
 import org.flywaydb.core.api.migration.JavaMigration;
 import org.qubership.integration.platform.variables.management.configuration.datasource.properties.FlywayConfigProperties;
-import org.qubership.integration.platform.variables.management.db.migration.postrgesql.configs.ConfigsJavaMigration;
+import org.qubership.integration.platform.variables.management.db.migration.postgresql.configs.ConfigsJavaMigration;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

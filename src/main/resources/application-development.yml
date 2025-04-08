@@ -23,3 +23,13 @@ kubernetes:
 consul:
   url: ${CONSUL_URL:http://consul:8500}
 
+tenant:
+  default:
+    id: 00000000-0000-0000-0000-000000000000
+
+qip:
+  datasource:
+    configuration:
+      enabled: false
+  flyway-initializer:
+    enabled: true
