@@ -1,4 +1,4 @@
-package org.qubership.integration.platform.variables.management.configuration;
+package org.qubership.integration.platform.variables.management.configuration.tenant;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
