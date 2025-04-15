@@ -7,7 +7,7 @@ import org.qubership.cloud.framework.contexts.tenant.context.TenantContext;
 import org.qubership.cloud.headerstracking.filters.context.RequestIdContext;
 import org.qubership.cloud.tenantmanager.client.Tenant;
 import org.qubership.cloud.tenantmanager.client.TenantManagerConnector;
-import org.qubership.integration.platform.variables.management.configuration.TenantConfiguration;
+import org.qubership.integration.platform.variables.management.configuration.tenant.TenantConfiguration;
 import org.qubership.integration.platform.variables.management.util.DevModeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
