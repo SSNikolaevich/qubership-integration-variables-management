@@ -18,14 +18,9 @@
         <revision>0.1.2</revision>
 
         <!-- BOMs -->
-        <dbaas-client-bom.version>8.0.0-SNAPSHOT</dbaas-client-bom.version>
-        <context-propagation-bom.version>7.0.0-SNAPSHOT</context-propagation-bom.version>
+        <cloud-core-java-bom.version>11.0.0-SNAPSHOT</cloud-core-java-bom.version>
         <spring-cloud-bom.version>2024.0.0</spring-cloud-bom.version>
         <jackson-bom.version>2.17.0</jackson-bom.version>
-
-        <!-- Cloud-core dependencies -->
-
-        <maas-client.version>11.0.0-SNAPSHOT</maas-client.version>
 
         <!-- 3rd party dependencies -->
 
@@ -55,16 +50,8 @@
 
             <dependency>
                 <groupId>org.qubership.cloud</groupId>
-                <artifactId>dbaas-client-bom</artifactId>
-                <version>${dbaas-client-bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.qubership.cloud</groupId>
-                <artifactId>context-propagation-bom</artifactId>
-                <version>${context-propagation-bom.version}</version>
+                <artifactId>cloud-core-java-bom</artifactId>
+                <version>${cloud-core-java-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -83,24 +70,6 @@
                 <version>${jackson-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <!-- Dependencies -->
-
-            <dependency>
-                <groupId>org.qubership.cloud.maas.client</groupId>
-                <artifactId>maas-client</artifactId>
-                <version>${maas-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.qubership.cloud.maas.client</groupId>
-                <artifactId>kafka-blue-green-consumer</artifactId>
-                <version>${maas-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.qubership.cloud.maas.client</groupId>
-                <artifactId>deployment-version-tracker</artifactId>
-                <version>${maas-client.version}</version>
             </dependency>
 
             <dependency>
