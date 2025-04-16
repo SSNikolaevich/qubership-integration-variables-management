@@ -16,6 +16,7 @@
 
 package org.qubership.integration.platform.variables.management.configuration;
 
+import org.qubership.integration.platform.variables.management.interceptors.MDCInterceptor;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
