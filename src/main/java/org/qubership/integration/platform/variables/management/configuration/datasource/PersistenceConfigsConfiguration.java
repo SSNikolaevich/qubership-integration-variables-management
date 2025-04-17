@@ -13,7 +13,7 @@ import org.qubership.cloud.dbaas.client.management.DbaasPostgresProxyDataSource;
 import org.qubership.cloud.dbaas.client.management.classifier.DbaaSChainClassifierBuilder;
 import org.qubership.cloud.dbaas.client.management.classifier.DbaasClassifierFactory;
 import org.qubership.cloud.framework.contexts.tenant.context.TenantContext;
-import org.qubership.integration.platform.variables.management.configuration.tenant.TenantConfiguration;
+import org.qubership.integration.platform.variables.management.configuration.TenantConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
