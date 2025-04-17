@@ -306,13 +306,6 @@
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-exporter-otlp</artifactId>
         </dependency>
-
-        <!-- Used for TenantManagement only! (org.qubership.cloud.tenantmanager) -->
-        <dependency>
-            <groupId>org.qubership.cloud.maas.client</groupId>
-            <artifactId>maas-client</artifactId>
-        </dependency>
-
     </dependencies>
 
 
