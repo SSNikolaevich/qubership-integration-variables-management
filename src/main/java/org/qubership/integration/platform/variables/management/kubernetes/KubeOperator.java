@@ -25,7 +25,7 @@ import java.util.*;
 
 public interface KubeOperator {
     Map<String, ? extends Map<String, String>> getAllSecretsWithLabel(Pair<String, String> label);
-
+    
     @Nullable
     V1Secret getSecretObjectByName(String name);
 
