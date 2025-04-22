@@ -70,7 +70,7 @@ db:
       create-schemas: true
       outOfOrder: true
       locations: ${db.postgres.datasources.configs.flyway.locations}
-      ignoreMigrationPatterns: ''
+      ignoreMigrationPatterns: '*:future,*:missing'
   hikari:
     datasources:
       datasource:
